@@ -1,0 +1,48 @@
+﻿@model IEnumerable<PassionProject.Models.Partner>
+@{
+    ViewBag.Title = "Create";
+}
+<a href="/Consultant/List">Consultant List</a>
+
+<h2>Create Consultant</h2>
+
+<form action="/Consultant/Create" method="Post">
+    <fieldset>
+        <legend>General Information</legend>
+        <div>
+            <label for="f_name">First Name:</label><input id="f_name" name="First_Name" type="text" />
+            <label for="l_name">Last Name:</label><input id="l_name" name="Last_Name" type="text" />
+        </div>
+
+        <div>
+            <label for="mobile">Mobile Number:</label><input id="mobile" name="Mobile_Number" type="text" />
+        </div>
+        <div>
+            <label for="email">Email:</label><input id="email" name="Email" type="text" />
+        </div>
+        <div>
+            <label for="address">Address:</label><input id="address" name="Address" type="text" />
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Job Information</legend>
+
+        <div>
+            <label for="wage">Wage:</label><input id="wage" name="Wage" type="number" step=".01" min="0"/>
+        </div>
+        <div>
+            <label for="hire_date">Hire Date:</label><input id="hire_date" name="Hire_date" type="date" />
+        </div>
+        <div>
+            <select id="partner" name="PartnerId" type="number">
+                @foreach (var partner in Model)
+                {
+                    <option value="@partner.PartnerId">@partner.PartnerId : @partner.Name</option>
+                }
+            </select>
+        </div>
+    </fieldset>
+
+    <button type="submit">Create</button>
+</form>
+

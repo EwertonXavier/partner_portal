@@ -1,0 +1,18 @@
+﻿@model IEnumerable<PassionProject.Models.Partner>
+@{
+    ViewBag.Title = "List";
+}
+
+<h1>List</h1>
+
+<p>Total number of partners: @Model.Count()</p>
+
+<a href="/Partner/Create">Add new Partner</a>
+
+@foreach(var partner in Model)
+    {
+    <h2><a href="/Partner/Details/@partner.PartnerId">@partner.Name</a></h2>
+        <p>PartnerId: @partner.PartnerId</p>
+    }
+
+

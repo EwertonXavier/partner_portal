@@ -1,0 +1,17 @@
+﻿@model PassionProject.Models.Partner
+@{
+    ViewBag.Title = "Delete";
+}
+<a href="/Partner/List">Partner List</a>
+
+
+<h2>Delete Partner</h2>
+
+<p>Partner id:@Model.PartnerId</p>
+
+<p>Partner Name: @Model.Name</p>
+
+<form method="POST" action="/Partner/Delete/@Model.PartnerId">
+    <!--<input type="hidden" name="PartnerId" value="@Model.PartnerId" />-->
+    <button type="submit">Delete</button>
+</form>

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<PassionProject.Models.Consultant>
+@{
+    ViewBag.Title = "List";
+}
+
+<h1>List</h1>
+
+<p>Total number of Consultants: @Model.Count()</p>
+
+<a href="/Consultant/Create">Add new Consultant</a>
+
+@foreach (var consultant in Model)
+{
+    <h2><a href="/Consultant/Details/@consultant.Consultant_Id">@consultant.First_Name @consultant.Last_Name </a></h2>
+    <p>PartnerId: @consultant.PartnerId</p>
+}
+
+

@@ -1,0 +1,21 @@
+﻿@model PassionProject.Models.Consultant
+@{
+    ViewBag.Title = "Delete";
+}
+<a href="/Consultant/List">Consultant List</a>
+
+
+<h2>Delete Consultant </h2>
+
+<h3>Details</h3>
+<p>Partner id:@Model.PartnerId</p>
+<p>First Name: @Model.First_Name</p>
+<p>Last Name: @Model.Last_Name</p>
+<p>Mobile Number: @Model.Mobile_Number</p>
+<p>Email: @Model.Email</p>
+<p>Address:@Model.Address</p>
+
+<form method="POST" action="/Consultant/Delete/@Model.Consultant_Id">
+    <!--<input type="hidden" name="PartnerId" value="@Model.PartnerId" />-->
+    <button type="submit">Delete Consultant</button>
+</form>

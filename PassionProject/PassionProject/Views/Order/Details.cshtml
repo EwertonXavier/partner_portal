@@ -1,0 +1,37 @@
+﻿@model PassionProject.Models.OrderDto
+@{
+    ViewBag.Title = "Details";
+}
+<a href="/Order/List">Orders List</a>
+
+
+<h2>Details</h2>
+<a href="/Order/Edit/@Model.Order_Id">Edit Order</a>
+<div>
+    <h3>Order Information</h3>
+    <div>
+        <p>Order Id: @Model.Order_Id</p>
+        <p>Order Type: @Model.Type</p>
+        <p>Artifact: @Model.Artifact_Id</p>
+        @if (Model.Consultant_Id != null)
+        {
+            <p>Consultant: @Model.Consultant_Id</p>
+        }
+        else
+        {
+            <p>Consultant: No Consultant Selected</p>
+        }   
+        @if (Model.PartnerId != null)
+        {
+            <p>Partner: @Model.PartnerId</p>
+        }
+        else
+        {
+            <p>Partner: No Partner Selected</p>
+        }
+        <p>Creation date: @Model.Create_Date</p>
+    </div>
+</div>
+
+
+<a href="/Consultant/Delete/@Model.Consultant_Id">Delete Consultant</a>

@@ -1,0 +1,12 @@
+﻿@model PassionProject.Models.Partner
+@{
+    ViewBag.Title = "Details";
+}
+<a href="/Partner/List">Partner List</a>
+
+
+<h2>Details</h2>
+<a href="/Partner/Edit/@Model.PartnerId">Edit Partner</a>
+<p>Partner id:@Model.PartnerId</p>
+<p>Partner Name:@Model.Name</p>
+<a href="/Partner/Delete/@Model.PartnerId">Delete Partner</a>

@@ -1,0 +1,15 @@
+﻿@model PassionProject.Models.Partner
+@{
+    ViewBag.Title = "Edit";
+}
+<a href="/Partner/List">Partner List</a>
+
+
+<h2>Edit Partner</h2>
+
+<p>Partner id:@Model.PartnerId</p>
+<form method="POST" action="/Partner/Edit/@Model.PartnerId">
+    <label>Partner Name:</label><input type="text" id="Name" name="name" value=@Model.Name>
+    <input type="hidden" name="PartnerId" value="@Model.PartnerId" />
+    <button type="submit">Edit</button>
+</form>

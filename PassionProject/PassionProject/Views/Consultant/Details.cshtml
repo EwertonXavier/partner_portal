@@ -1,0 +1,27 @@
+﻿@model PassionProject.Models.ConsultantDto
+@{
+    ViewBag.Title = "Details";
+}
+<a href="/Consultant/List">Consultant List</a>
+
+
+<h2>Details</h2>
+<a href="/Consultant/Edit/@Model.Consultant_Id">Edit Consultant</a>
+<div>
+    <h3>General Information</h3>
+    <div>
+        <p>First Name: @Model.First_Name</p>
+        <p>Last Name: @Model.Last_Name</p>
+        <p>Mobile Number: @Model.Mobile_Number</p>
+        <p>Email: @Model.Email</p>
+        <p>Address:@Model.Address</p>
+    </div>
+</div>
+    <h3>Job Information</h3>
+    <div>
+        <p>Wage:@Model.Wage</p>
+        <p>Hire Date:@Model.Hire_date.ToShortDateString()</p>
+        <p>PartnerId:@Model.PartnerId</p>
+    </div>
+
+<a href="/Consultant/Delete/@Model.Consultant_Id">Delete Consultant</a>

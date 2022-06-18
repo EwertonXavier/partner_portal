@@ -1,0 +1,33 @@
+﻿@model IEnumerable<PassionProject.Models.OrderDto>
+@{
+    ViewBag.Title = "Order";
+}
+
+<h1>Orders</h1>
+
+<p>Total number of Orders: @Model.Count()</p>
+
+<a href="/Order/Create">Add new Order</a>
+
+@foreach (var order in Model)
+{
+    <h2><a href="/Order/Details/@order.Order_Id">@order.Type @order.Order_Id </a></h2>
+    if (order.Consultant_Id != null)
+    {
+        <p>Consultant: @order.Consultant_Id</p>
+    }
+    else
+    {
+        <p>Consultant: No consultant Selected</p>
+    }
+    if (order.PartnerId != null)
+    {
+        <p>Partner: @order.PartnerId</p>
+    }
+    else
+    {
+        <p>Partner: No partner Selected</p>
+    }
+
+}
+

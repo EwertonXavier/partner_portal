@@ -1,0 +1,23 @@
+﻿@model PassionProject.Models.OrderDto
+@{
+    ViewBag.Title = "Edit";
+}
+<a href="/Order/List">Order List</a>
+
+<h2>Edit Order</h2>
+
+<form action="/Order/Edit/@Model.Order_Id" method="Post">
+    <fieldset>
+        <legend>Order Information</legend>
+        <div>
+            <label for="order_type">Order Type: </label> <input type="text" name="Type" id="order_type" value=@Model.Type>
+            <label for="Artifact_Id">Artifact Id: </label> <input type="text" name="Artifact_Id" id="Artifact_Id" value=@Model.Artifact_Id >
+            <label for="Consultant_Id">Consultant Id: </label> <input type="text" name="Consultant_Id" id="Consultant_Id" value=@Model.Consultant_Id >
+            <label for="PartnerId">PartnerId Id: </label> <input type="text" name="PartnerId" id="PartnerId" value=@Model.PartnerId >
+            <label for="Create_Date">Create Date: </label> <input type="datetime" name="Create_Date" id="Create_Date" value=@Model.Create_Date >
+            <input type="number" name="Order_Id" id="Order_Id" value=@Model.Order_Id hidden>
+        </div>
+    </fieldset>
+
+    <button type="submit">Edit</button>
+</form>

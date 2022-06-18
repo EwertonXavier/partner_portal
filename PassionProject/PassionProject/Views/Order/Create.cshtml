@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+<a href="/Order/List">Order List</a>
+
+<h2>Create Order</h2>
+
+<form action="/Order/Create" method="Post">
+    <fieldset>
+        <legend>Order Information</legend>
+        <div>
+            <label for="order_type">Order Type: </label> <input type="text" name="Type" id="order_type"/>
+            <label for="Artifact_Id">Artifact Id: </label> <input type="text" name="Artifact_Id" id="Artifact_Id"/>
+            <label for="Consultant_Id">Consultant Id: </label> <input type="text" name="Consultant_Id" id="Consultant_Id"/>
+            <label for="PartnerId">PartnerId Id: </label> <input type="text" name="PartnerId" id="PartnerId"/>
+            <label for="Create_Date">Create Date: </label> <input type="date" name="Create_Date" id="Create_Date"/>
+        </div>
+    </fieldset>
+
+    <button type="submit">Create</button>
+</form>
+
